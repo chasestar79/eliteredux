@@ -4940,8 +4940,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_METEOR_MASH] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 90,
-            .accuracy = 90,
+            .power = 100,
+            .accuracy = 100,
         #else
             .power = 100,
             .accuracy = 85,
@@ -5914,11 +5914,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_METAL_BURST,
         .power = 0,
         .type = TYPE_STEEL,
-        .accuracy = 100,
+        .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_DEPENDS,
-        .priority = 0,
+        .priority = -5,
         .split = SPLIT_PHYSICAL,
     },
 
@@ -11825,7 +11825,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_IRON_FANGS] =
     {
         .effect = EFFECT_BRICK_BREAK,
-        .power = 85,
+        .power = 95,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 15,
@@ -11880,12 +11880,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_JAGGED_FANGS] =
     {
-        .effect = EFFECT_ATTACK_UP_HIT,
-        .power = 70,
+        .effect = EFFECT_DEFENSE_UP_HIT,
+        .power = 95,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 15,
-        .secondaryEffectChance = 10,
+        .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,

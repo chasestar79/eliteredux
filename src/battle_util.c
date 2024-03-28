@@ -5227,9 +5227,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 				gBattleScripting.abilityPopupOverwrite = gLastUsedAbility = ABILITY_NORTH_WIND;
 				gSideStatuses[GetBattlerSide(battler)] |= SIDE_STATUS_AURORA_VEIL;
                 if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
-                    gSideTimers[GET_BATTLER_SIDE(battler)].auroraVeilTimer = 5;
+                    gSideTimers[GET_BATTLER_SIDE(battler)].auroraVeilTimer = 8;
                 else
-                    gSideTimers[GET_BATTLER_SIDE(battler)].auroraVeilTimer = 3;
+                    gSideTimers[GET_BATTLER_SIDE(battler)].auroraVeilTimer = 5;
 				BattleScriptPushCursorAndCallback(BattleScript_NorthWindActivated);
 				effect++;
 			}
@@ -8640,7 +8640,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && TARGET_TURN_DAMAGED
              && CanBeParalyzed(gBattlerAttacker, gBattlerTarget)
              && IsMoveMakingContact(move, gBattlerAttacker) //Does it need to be a contact move?
-             && (Random() % 10) == 0)
+             && (Random() % 99) == 0)
             {
 				gBattleScripting.abilityPopupOverwrite = gLastUsedAbility = ABILITY_FEARMONGER;
                 gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
@@ -13023,6 +13023,10 @@ u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDef, u8 m
         if (gBattleMoves[move].flags & FLAG_KEEN_EDGE_BOOST)
            MulModifier(&modifier, UQ_4_12(1.3));
         break;
+    case ABILITY_SWEEPING_EDGE:
+        if (gBattleMoves[move].flags & FLAG_KEEN_EDGE_BOOST)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        break;    
     case ABILITY_SHEER_FORCE:
         if (gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
            MulModifier(&modifier, UQ_4_12(1.3));
@@ -13998,7 +14002,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
 	case ABILITY_LEVITATE:
         if (moveType == TYPE_FLYING)
         {
-            MulModifier(&modifier, UQ_4_12(1.25));
+            MulModifier(&modifier, UQ_4_12(1.5));
         }
         break;
 		

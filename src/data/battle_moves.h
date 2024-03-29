@@ -2508,7 +2508,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_HYPER_FANG] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 75,
+        .power = 95,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 15,
@@ -3242,8 +3242,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_GIGA_DRAIN] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            .power = 75,
-            .pp = 10,
+            .power = 80,
+            .pp = 15,
         #elif B_UPDATED_MOVE_DATA == GEN_4
             .power = 60,
             .pp = 10,
@@ -6642,7 +6642,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_EARTH_POWER] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
-        .power = 90,
+        .power = 95,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 15,
@@ -6759,7 +6759,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 70,
+        .power = 90,
         .type = TYPE_ELECTRIC,
         .accuracy = 100,
         .pp = 15,
@@ -6778,7 +6778,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 70,
+        .power = 90,
         .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 15,
@@ -6797,7 +6797,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_SHEER_FORCE_BOOST | FLAG_STRONG_JAW_BOOST,
         #endif
         .effect = EFFECT_FLINCH_STATUS,
-        .power = 70,
+        .power = 90,
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 15,
@@ -7828,7 +7828,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ACID_SPRAY] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT_2,
-        .power = 40,
+        .power = 70,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 20,

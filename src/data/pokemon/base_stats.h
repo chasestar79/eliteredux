@@ -20020,7 +20020,7 @@ const struct BaseStats gBaseStats[] =
 [SPECIES_HAXORUS] =
     {
     .baseHP        = 116,
-    .baseAttack    = 157,
+    .baseAttack    = 147,
     .baseDefense   = 120,
     .baseSpeed     = 77,
     .baseSpAttack  = 60,
@@ -20036,7 +20036,7 @@ const struct BaseStats gBaseStats[] =
     .growthRate = GROWTH_SLOW,
     .eggGroup1 = EGG_GROUP_MONSTER,
     .eggGroup2 = EGG_GROUP_DRAGON,
-    .abilities = {ABILITY_FEARMONGER, ABILITY_KEEN_EDGE, ABILITY_SHEER_FORCE},
+    .abilities = {ABILITY_NOSFERATU, ABILITY_KEEN_EDGE, ABILITY_SHEER_FORCE},
     .innates = {ABILITY_MOLD_BREAKER, ABILITY_SWEEPING_EDGE, ABILITY_BATTLE_ARMOR},
     .bodyColor = BODY_COLOR_YELLOW,
     .noFlip = FALSE,
